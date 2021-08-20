@@ -1,0 +1,14 @@
+- domTextElement
+    The DOM element with text
+
+- objParams
+    The parameters are describing the text textures.
+
+    - textureSrc
+        The path to texture image
+
+    - offsetX
+        The image texture x offset
+
+    - offsetY
+        The image texture y offset

@@ -1,0 +1,48 @@
+@mixin ol($content,$iteration) {
+  ol {
+    $point: point + $iteration;
+    $conte: $content counter($point) ".";
+    counter-reset: $point;
+
+    li a {
+      &:before {
+        content: $conte " ";
+        counter-increment: $point;
+      }
+    }
+
+    @if $iteration > 1 {
+      @include ol($conte, $iteration - 1);
+    }
+  }
+}
+
+.menu {
+  overflow-x: hidden;
+  overflow-y: auto;
+  @include ol("", 6);
+
+  ol, li {
+    padding: 0;
+    margin: 0;
+  }
+
+  ol li {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    font-size: 14px;
+  }
+
+  ol li a {
+    color: #5481aa;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

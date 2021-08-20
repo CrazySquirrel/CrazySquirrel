@@ -1,0 +1,19 @@
+.accordion__button {
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  font-size: 150%;
+  height: 64px;
+  margin: 0 -1rem;
+  line-height: 64px;
+  background: #f2f2f2;
+  color: #1c262f;
+  transition-property: color, background;
+  transition-timing-function: ease;
+  transition-duration: .2s;
+}
+
+.accordion__button:hover {
+  background: #02b3e4;
+  color: #ffffff;
+}

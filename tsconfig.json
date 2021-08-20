@@ -1,0 +1,69 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "target": "es5",
+    "jsx": "react",
+    "lib": [
+      "webworker",
+      "es6",
+      "dom"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "components/*": [
+        "src/components/*"
+      ],
+      "store/*": [
+        "src/store/*"
+      ],
+      "reducers/*": [
+        "src/reducers/*"
+      ],
+      "actions/*": [
+        "src/actions/*"
+      ],
+      "models/*": [
+        "src/models/*"
+      ],
+      "utils/*": [
+        "src/utils/*"
+      ],
+      "tools/*": [
+        "src/tools/*"
+      ],
+      "types/*": [
+        "src/types/*"
+      ],
+      "pages/*": [
+        "src/pages/*"
+      ],
+      "authors/*": [
+        "src/authors/*"
+      ],
+      "routs/*": [
+        "src/routs/*"
+      ],
+      "images/*": [
+        "src/images/*"
+      ],
+      "fonts/*": [
+        "src/fonts/*"
+      ],
+      "scss/*": [
+        "src/scss/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.example.*"
+  ]
+}

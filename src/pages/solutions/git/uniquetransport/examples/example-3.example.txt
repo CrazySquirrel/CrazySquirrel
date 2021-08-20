@@ -1,0 +1,66 @@
+{
+    ServerAddress: "http://127.0.0.1:8888/", // Default connection address
+    ConnectionTimeout: 1000, // Connection timeout
+    Password: "xmas", // Password
+    Reconnections: 10, // Default reconnection
+    Transports: { // Transports: If some settings of the transport or the whole transport is not needed, then it should be set to false go is to remove from the settings.
+        xhr: {
+            HttpMethods: {
+                GET: true,
+                POST: true,
+                PUT: true,
+                PATCH: true,
+            },
+            SubTransports: {
+                path: true,
+                name: true,
+                params: true,
+                header: true,
+                body: true,
+            },
+        },
+        fetch: {
+            HttpMethods: {
+                GET: true,
+                POST: true,
+                PUT: true,
+                PATCH: true,
+            },
+            SubTransports: {
+                path: true,
+                name: true,
+                params: true,
+                header: true,
+                body: true,
+            },
+        },
+        iframe: {
+            SubTransports: {
+                path: true,
+                name: true,
+                params: true,
+            },
+        },
+        script: {
+            SubTransports: {
+                path: true,
+                name: true,
+                params: true,
+            },
+        },
+        image: {
+            SubTransports: {
+                path: true,
+                name: true,
+                params: true,
+            },
+        },
+        style: {
+            SubTransports: {
+                path: true,
+                name: true,
+                params: true,
+            },
+        }
+    },
+}

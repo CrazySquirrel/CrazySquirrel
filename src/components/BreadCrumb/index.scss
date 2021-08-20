@@ -1,0 +1,16 @@
+.bread-crumb .link:after {
+  font-family: "Font Awesome";
+  content: "\f105";
+  display: inline-block;
+  padding: 0 .5em;
+}
+
+.bread-crumb .link:last-child:after {
+  display: none;
+}
+
+@media --media-print {
+  .bread-crumb {
+    display: none;
+  }
+}

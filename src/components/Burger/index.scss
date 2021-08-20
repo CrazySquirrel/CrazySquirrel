@@ -1,0 +1,227 @@
+.burger {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 16px 20px;
+  width: 64px;
+  height: 48px;
+  position: relative;
+  cursor: pointer;
+}
+
+.burger__content {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.burger__line {
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background: #aaaaaa;
+  will-change: transform;
+
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+
+  transform: translate3d(0, 0, 0);
+  transition-property: background, transform;
+  transition-duration: 2s;
+}
+
+.burger__line.burger__line_line_1 {
+  top: 0;
+}
+
+.burger__line.burger__line_line_2 {
+  margin: -1px 0 0;
+  top: 50%;
+}
+
+.burger__line.burger__line_line_3 {
+  bottom: 0;
+}
+
+.burger:hover .burger__line {
+  background: #ffffff;
+}
+
+.burger_step_1:hover .burger__line,
+.burger_step_2:hover .burger__line,
+.burger_step_3:hover .burger__line {
+  background: #02b3e4;
+}
+
+.burger_animation_forward .burger__line_line_1 {
+  animation-name: line1forward;
+}
+
+.burger_animation_forward .burger__line_line_2 {
+  animation-name: line2forward;
+}
+
+.burger_animation_forward .burger__line_line_3 {
+  animation-name: line3forward;
+}
+
+.burger_animation_backwards .burger__line_line_1 {
+  animation-name: line1backwards;
+}
+
+.burger_animation_backwards .burger__line_line_2 {
+  animation-name: line2backwards;
+}
+
+.burger_animation_backwards .burger__line_line_3 {
+  animation-name: line3backwards;
+}
+
+@media --media-desktop-base, --media-desktop-big, --media-desktop-large, --media-desktop-huge, --media-desktop-imac {
+  .burger {
+    display: none;
+  }
+}
+
+@media --media-phone-portrait {
+  .burger {
+    padding: 24px 20px;
+    height: 64px;
+  }
+}
+
+@keyframes line1forward {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  33% {
+    background: #02b3e4;
+    transform: translate(0, 7px);
+  }
+
+  66% {
+    background: #02b3e4;
+    transform: translate(0, 7px) rotate(0deg);
+  }
+
+  100% {
+    background: #02b3e4;
+    transform: translate(0, 7px) rotate(45deg);
+  }
+}
+
+@keyframes line1backwards {
+  0% {
+    background: #02b3e4;
+    transform: translate(0, 7px) rotate(45deg);
+  }
+
+  33% {
+    background: #02b3e4;
+    transform: translate(0, 7px) rotate(0deg);
+  }
+
+  66% {
+    background: #02b3e4;
+    transform: translate(0, 7px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes line2forward {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  33% {
+    background: #02b3e4;
+    transform: scale(1, 1);
+  }
+
+  66% {
+    background: #02b3e4;
+    transform: scale(0, 1);
+  }
+
+  100% {
+    background: #02b3e4;
+    transform: scale(0, 1);
+  }
+}
+
+@keyframes line2backwards {
+  0% {
+    background: #02b3e4;
+    transform: scale(0, 1);
+  }
+
+  33% {
+    background: #02b3e4;
+    transform: scale(0, 1);
+  }
+
+  66% {
+    background: #02b3e4;
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes line3forward {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  33% {
+    background: #02b3e4;
+    transform: translate(0, -7px);
+  }
+
+  66% {
+    background: #02b3e4;
+    transform: translate(0, -7px) rotate(0deg);
+  }
+
+  100% {
+    background: #02b3e4;
+    transform: translate(0, -7px) rotate(-45deg);
+  }
+}
+
+@keyframes line3backwards {
+  0% {
+    background: #02b3e4;
+    transform: translate(0, -7px) rotate(-45deg);
+  }
+
+  33% {
+    background: #02b3e4;
+    transform: translate(0, -7px) rotate(0deg);
+  }
+
+  66% {
+    background: #02b3e4;
+    transform: translate(0, -7px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+@media --media-phone-portrait {
+  .burger {
+    order: 2;
+  }
+}

@@ -1,0 +1,7 @@
+{
+    ServerPort: 8888, // Port to listen on
+    ConnectionTimeout: 1000, // Connection timeout
+    Password: "xmas", // Password
+    SuccessResponseCode: 200, // Success http response code
+    ErrorResponseCode: 404, // Error http response code
+}

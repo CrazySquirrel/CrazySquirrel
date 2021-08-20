@@ -1,0 +1,6 @@
+{
+    Event: "connect", // Event name [required]
+    Data: {}, // Data [optional]
+    Url: "http://127.0.0.1:8888/test/", // Connection url [optional]
+    Reconnections: 10, // Max reconnections [optional]
+}

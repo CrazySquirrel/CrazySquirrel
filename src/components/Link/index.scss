@@ -1,0 +1,34 @@
+a.link,
+span.link,
+.tabs__item.link {
+  text-decoration: none;
+  display: inline-block;
+  color: #364149;
+  position: relative;
+  overflow: hidden;
+}
+
+a.link,
+.tabs__item.link {
+  color: #025a73;
+  text-decoration: underline;
+
+  &:after {
+    content: "";
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.link_active,
+  &.tabs__item_active {
+    text-decoration: none;
+    cursor: default;
+    color: #025a73;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

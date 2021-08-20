@@ -1,0 +1,22 @@
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -.25em;
+  font-size: 1.25em;
+}
+
+.badges__badge {
+  line-height: 1;
+  height: 1em;
+  width: auto;
+  padding: .25em;
+}
+
+.badges__badge:after {
+  display: none !important;
+}
+
+.badges__badge svg {
+  height: 1em;
+  width: auto;
+}

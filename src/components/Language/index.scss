@@ -1,0 +1,56 @@
+.language {
+  display: block;
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.language__content {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  overflow: hidden;
+  box-sizing: border-box;
+  fill: #aaa;
+  border: 2px solid #aaa;
+  border-radius: 50%;
+  position: relative;
+  transition: fill .2s, border .2s;
+}
+
+.language__content svg {
+  $originHeight: 933;
+  $originWidth: 1566;
+  $currentHeight: 32;
+  $currentWidth: ($originWidth * $currentHeight / $originHeight);
+  height: $currentHeight + px;
+  width: $currentWidth + px;
+  position: absolute;
+  left: 50%;
+  transform: translate(($currentWidth * -0.5) + px, 0);
+  transition: left .2s;
+}
+
+.language:hover .language__content {
+  fill: #fff;
+  border: 2px solid #fff;
+}
+
+.language_active .language__content {
+  fill: #02b3e4;
+  border: 2px solid #02b3e4;
+}
+
+.language_active:hover .language__content {
+  fill: #02b3e4;
+  border: 2px solid #02b3e4;
+}
+
+@media --media-phone-portrait {
+  .language {
+    order: 2;
+  }
+}

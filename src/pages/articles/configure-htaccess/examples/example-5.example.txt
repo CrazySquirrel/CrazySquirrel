@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} !^crazysquirrel\.ru$ [NC]
+RewriteRule ^(.*)$ https://crazysquirrel.ru/$1 [R=301,L]
+RewriteCond %{THE_REQUEST} ^.*/index.php
+RewriteRule ^(.*)index.php$ https://crazysquirrel.ru/$1 [R=301,L]
+RewriteCond %{QUERY_STRING} !^$ [NC]
+RewriteCond %{THE_REQUEST} \? [NC]
+RewriteCond %{THE_REQUEST} !admin [NC]
+RewriteRule ^(.*)?(.*)$ https://crazysquirrel.ru/$1? [R=301,L]

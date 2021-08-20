@@ -1,0 +1,1 @@
+types: ["twitter","facebook","vkontakte","print"]

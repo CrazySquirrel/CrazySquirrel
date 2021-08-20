@@ -1,0 +1,258 @@
+language: node_js
+
+node_js: '14'
+
+install:
+  - yarn install
+
+script:
+  - yarn run lint
+  - yarn run build:deployment
+
+after_success:
+  - yarn install -g codeclimate-test-reporter
+  - codeclimate-test-reporter < coverage/lcov.info
+
+deploy:
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrel
+    local_dir: ./build/base
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelRU
+    local_dir: ./build/ru
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelEN
+    local_dir: ./build/en
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelHR
+    local_dir: ./build/hr
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelFI
+    local_dir: ./build/fi
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelAZ
+    local_dir: ./build/az
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelPT
+    local_dir: ./build/pt
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelLT
+    local_dir: ./build/lt
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelSV
+    local_dir: ./build/sv
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelDA
+    local_dir: ./build/da
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelBE
+    local_dir: ./build/be
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelEL
+    local_dir: ./build/el
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelCA
+    local_dir: ./build/ca
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelRO
+    local_dir: ./build/ro
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelLV
+    local_dir: ./build/lv
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelES
+    local_dir: ./build/es
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelTR
+    local_dir: ./build/tr
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelET
+    local_dir: ./build/et
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelSQ
+    local_dir: ./build/sq
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelMK
+    local_dir: ./build/mk
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelCS
+    local_dir: ./build/cs
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelNL
+    local_dir: ./build/nl
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelHY
+    local_dir: ./build/hy
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelNO
+    local_dir: ./build/no
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelIT
+    local_dir: ./build/it
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelBG
+    local_dir: ./build/bg
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelUK
+    local_dir: ./build/uk
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelSK
+    local_dir: ./build/sk
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelSR
+    local_dir: ./build/sr
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelDE
+    local_dir: ./build/de
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelHU
+    local_dir: ./build/hu
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelSL
+    local_dir: ./build/sl
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelFR
+    local_dir: ./build/fr
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+  - provider: pages
+    repo: CrazySquirrel/CrazySquirrelPL
+    local_dir: ./build/pl
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: main
+
+branches:
+  only:
+    - main

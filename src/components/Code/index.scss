@@ -1,0 +1,26 @@
+.code,
+.code.hljs {
+  display: block;
+  font-size: 14px;
+  background: #f7f7f7;
+  margin: 1em -1em;
+  padding: 1em;
+}
+
+@media --media-print {
+  .code,
+  .code.hljs {
+    //noinspection CssUnknownProperty
+    page-break-inside: avoid;
+  }
+}
+
+.hljs-link, .hljs-regexp {
+  color: #666;
+}
+
+.code-inline {
+  background: #f7f7f7;
+  display: inline-block;
+  padding: .2em .5em;
+}

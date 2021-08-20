@@ -1,0 +1,13 @@
+//If you use TypeScript in your project.
+import TexturedText from TexturedText.ts
+
+//If you use JavaScript in your project.
+let window = global;
+request("TexturedText.js");
+let TexturedText = window["TexturedText"];
+
+//If you just want to use JavaScript as usual.
+<script src="js/TexturedText.js"></script>
+
+//Then call just TexturedText class with parameters.
+new TexturedText(<domTextElement>,<objParams>);

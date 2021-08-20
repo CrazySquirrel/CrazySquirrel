@@ -1,0 +1,15 @@
+.sub-menu .link:after {
+  content: '|';
+  display: inline-block;
+  padding: 0 .5em;
+}
+
+.sub-menu .link:last-child:after {
+  display: none;
+}
+
+@media --media-print {
+  .sub-menu {
+    display: none;
+  }
+}
