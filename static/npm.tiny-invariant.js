@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcrazysquirrel=self.webpackChunkcrazysquirrel||[]).push([[996],{6791:(r,e,a)=>{a.d(e,{Z:()=>s});var n="Invariant failed";const s=function(r,e){if(!r)throw new Error(n)}}}]);
