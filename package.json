@@ -89,7 +89,7 @@
     "markdown-loader": "^6.0.0",
     "mini-css-extract-plugin": "^1.6.0",
     "mkdirp": "^1.0.4",
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.0",
     "parallel-webpack": "^2.6.0",
     "postcss": "^8.2.14",
     "postcss-csso": "^5.0.1",
