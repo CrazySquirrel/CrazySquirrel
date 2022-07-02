@@ -343,6 +343,7 @@ module.exports = (target, mode, locale = 'base') => {
               require('../scripts/ssr').ssr(locale);
               require('../scripts/sitemap').sitemap(locale);
               require('../scripts/yandex').yandex(locale);
+              require('../scripts/translate').translate(locale);
             });
           }
         }

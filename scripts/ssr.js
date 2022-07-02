@@ -106,7 +106,7 @@ function ssr(locale) {
 
   const domain = locale === 'base' ? 'crazysquirrel.ru' : `${locale}.crazysquirrel.ru`;
 
-  console.log(`https://${domain}`);
+  console.log(`\r\nhttps://${domain}`);
 
   delete require.cache[require.resolve(STATIC + '/server/index.js')];
 
